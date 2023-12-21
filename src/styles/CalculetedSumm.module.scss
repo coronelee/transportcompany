@@ -1,0 +1,302 @@
+.wrapper {
+  width: 100%;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  &__container {
+    height: 100%;
+    width: 1200px;
+    h1 {
+      width: 630px;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 45px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: rgba(255, 255, 255, 1);
+    }
+    .container__content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      position: relative;
+      .content__calculator {
+        padding: 50px;
+        margin-top: 50px;
+        width: 630px;
+        height: 600px;
+        background-color: rgba(54, 58, 77, 1);
+        box-shadow: 5px 15px 40px 0px rgba(1, 3, 10, 0.32);
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        .calculator__steps {
+          position: absolute;
+          display: flex;
+          top: -30px;
+          left: 50px;
+          gap: 40px;
+          div {
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 30px;
+            letter-spacing: 0em;
+            text-align: center;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            border: 1px rgba(54, 58, 77, 1) solid;
+            background-color: rgba(40, 43, 56, 1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .calculator__grid {
+          width: auto;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+          grid-gap: 15px;
+          h3 {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: white;
+          }
+          input {
+            width: 250px;
+            height: 55px;
+            border: 0;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: left;
+            border-radius: 10px;
+          }
+          input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+            border: 1px rgba(40, 43, 56, 1) solid;
+            border-radius: 4px;
+            margin: 0;
+          }
+          .checkboxes {
+            height: 100%;
+            width: 100%;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            div {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              span {
+                margin: 0;
+                color: white;
+                font-size: 15px;
+                font-weight: 600;
+                line-height: 19px;
+                letter-spacing: 0em;
+                text-align: left;
+              }
+            }
+          }
+        }
+        .uploadImage {
+          width: 523px;
+          height: 75px;
+          margin-top: 10px;
+          .spans {
+            display: flex;
+            justify-content: space-between;
+            span {
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 19px;
+              letter-spacing: 0em;
+              text-align: left;
+              color: white;
+            }
+            a {
+              color: rgba(229, 53, 53, 1);
+              font-size: 13px;
+              font-weight: 400;
+              line-height: 16px;
+              letter-spacing: 0em;
+              text-align: left;
+              text-decoration-line: underline;
+            }
+          }
+          button {
+            margin-top: 10px;
+            width: 100%;
+            height: 43px;
+            border-radius: 10px;
+            border: 1px rgba(255, 255, 255, 0.26) dashed;
+            background-color: transparent;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: white;
+          }
+        }
+        .button__nextStep {
+          margin-top: 20px;
+          width: 250px;
+          height: 70px;
+          background-color: rgba(229, 141, 53, 1);
+          border-radius: 90px;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 23px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: white;
+          border: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          svg {
+            color: rgba(177, 101, 25, 1);
+            width: 26px;
+            height: 26px;
+          }
+        }
+      }
+      .calculator__secStep {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 25px;
+        h1 {
+          text-align: center;
+          color: white;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 30px;
+          letter-spacing: 0em;
+        }
+        h4 {
+          color: white;
+          font-size: 15px;
+          font-weight: 600;
+          line-height: 19px;
+          letter-spacing: 0em;
+          text-align: left;
+          margin: 0;
+          margin-bottom: 10px;
+        }
+        input {
+            margin: 0;
+            width: calc(100% - 30px);
+            height: 20px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: rgb(79, 79, 79);
+            padding: 15px;
+            resize: none;
+        }
+        div {
+          height: 80px;
+        }
+      }
+      .calculator__threeStep {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h1 {
+          margin: 0;
+        }
+        h5 {
+          margin: 0;
+          margin-top: 10px;
+          width: 100%;
+          font-size: 17px;
+          font-weight: 400;
+          line-height: 21px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: rgba(255, 255, 255, 1);
+        }
+        h4 {
+          font-size: 15px;
+          font-weight: 600;
+          line-height: 19px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: rgba(255, 255, 255, 1);
+          margin: 0;
+          margin-top: 25px;
+          margin-bottom: 10px;
+        }
+        input, textarea{
+          margin: 0;
+          width: calc(100% - 30px);
+          height: 20px;
+          border-radius: 10px;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 19px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: rgb(79, 79, 79);
+          padding: 15px;
+          resize: none;
+        }
+        .contacts {
+          display: flex;
+          gap: 40px;
+        }
+        div {
+          width: 100%;
+        }
+      }
+      .final{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        color: white;
+        svg{
+            width: 112px;
+            height: 112px;
+            text-align: left;
+            color:rgba(137, 194, 73, 1)
+        }
+      }
+      .content__image {
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        top: -140px;
+        right: 10px;
+        background-image: url(/public/man.png);
+        background-size: cover;
+      }
+    }
+  }
+}
