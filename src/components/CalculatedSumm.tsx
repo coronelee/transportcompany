@@ -6,14 +6,13 @@ export default function CalculatedSumm() {
   const [countStep, setCountStep] = useState(0);
 
   const count = (count: number) => {
-    console.log(count);
     if (count == 2) {
       setCountStep(countStep + 1);
       let elemetys: any = document.getElementById("calc");
       elemetys.style.backgroundColor = "transparent";
       elemetys.style.boxShadow = "none";
-      elemetys = document.getElementById("title");
-      elemetys.style.display = "none";
+      // elemetys = document.getElementById("title");
+      // elemetys.style.display = "none";
       elemetys = document.getElementById("steps");
       elemetys.style.display = "none";
     } else {
@@ -52,7 +51,7 @@ export default function CalculatedSumm() {
   };
   return (
     <div className={styles.wrapper}>
-      <div className={styles.wrapper__container}>
+      <div className={styles.wrapper__container} id="calculator">
         <h1 id="title">Получить рассчет стоимости доставки вашего груза</h1>
         <div className={styles.container__content}>
           <div className={styles.content__calculator} id="calc">
@@ -188,7 +187,7 @@ export default function CalculatedSumm() {
             )}
             {countStep == 3 ? (
               <div className={styles.final}>
-                <h1>Получить рассчет стоимости доставки вашего груза</h1>
+                {/* <h1>Получить рассчет стоимости доставки вашего груза</h1> */}
                 <IoIosCheckmarkCircleOutline />
                 <h1>Спасибо за заявку!</h1>
                 <h3>Мы обязатальено свяжемся с вами.</h3>

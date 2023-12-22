@@ -24,7 +24,7 @@
       position: relative;
       .content__calculator {
         padding: 50px;
-        margin-top: 50px;
+        margin-top: 25px;
         width: 630px;
         height: 600px;
         background-color: rgba(54, 58, 77, 1);
@@ -281,6 +281,7 @@
         align-items: start;
         flex-direction: column;
         color: white;
+        margin-top: -200px;
         svg{
             width: 112px;
             height: 112px;

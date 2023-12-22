@@ -9,9 +9,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     .container__arrs {
-      width: 1500px;
+      width: 70%;
       height: 30px;
       position: absolute;
       display: flex;
@@ -20,8 +22,8 @@
         color: white;
         width: 50px;
         height: 50px;
-        &:hover{
-            cursor: pointer;
+        &:hover {
+          cursor: pointer;
         }
       }
     }
@@ -79,17 +81,28 @@
         }
       }
     }
-    .container__countSlide{
+    .container__countSlide {
       display: flex;
       position: absolute;
-      bottom: 50px;
+      bottom: 100px;
       gap: 10px;
-      div{
+      div {
         border-radius: 50%;
-        border:1px white solid;
+        border: 1px white solid;
         width: 8px;
         height: 8px;
       }
     }
   }
 }
+
+// @media (max-width: 1800px) {
+//   .wrapper {
+//     &__container {
+//       width: 1500px;
+//       .container__arrs {
+//         width: 1100px;
+//       }
+//     }
+//   }
+// }
