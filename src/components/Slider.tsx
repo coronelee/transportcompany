@@ -1,8 +1,9 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import styles from "../styles/Slider.module.scss";
 import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
+
 export default function Slider() {
   const [itemsCount, setItemsCount] = useState(0);
   const items = [
@@ -35,47 +36,52 @@ export default function Slider() {
   const sliderUP = (item: number) => {
     if (item >= 3) {
       setItemsCount(0);
-      let element: any = document.getElementById("0")
-      element.style.backgroundColor = "white"
-      element = document.getElementById("1")
-      element.style.backgroundColor = "transparent"
-      element = document.getElementById("2")
-      element.style.backgroundColor = "transparent"
-      element = document.getElementById("3")
-      element.style.backgroundColor = "transparent"
+      let element: any = document.getElementById("0");
+      element.style.backgroundColor = "white";
+      element = document.getElementById("1");
+      element.style.backgroundColor = "transparent";
+      element = document.getElementById("2");
+      element.style.backgroundColor = "transparent";
+      element = document.getElementById("3");
+      element.style.backgroundColor = "transparent";
     } else {
       setItemsCount(itemsCount + 1);
-      let element: any = document.getElementById(item+1+"")
-      element.style.backgroundColor = "white"
-      element = document.getElementById(item+"")
-      element.style.backgroundColor = "transparent"
-      element = document.getElementById(item+2+"")
-      element.style.backgroundColor = "transparent"
-      element = document.getElementById(item+3+"")
-      element.style.backgroundColor = "transparent"
+      let element: any = document.getElementById(item + 1 + "");
+      element.style.backgroundColor = "white";
+      element = document.getElementById(item + "");
+      element.style.backgroundColor = "transparent";
+      element = document.getElementById(item + 2 + "");
+      element.style.backgroundColor = "transparent";
+      element = document.getElementById(item + 3 + "");
+      element.style.backgroundColor = "transparent";
     }
   };
+
+  let timerId = setTimeout(function tick() {
+    sliderUP(items[itemsCount].key);
+  }, 2500);
+
   const sliderDOWN = (item: number) => {
     if (item <= 0) {
       setItemsCount(3);
-      let element: any = document.getElementById("3")
-      element.style.backgroundColor = "white"
-      element = document.getElementById("0")
-      element.style.backgroundColor = "transparent"
-      element = document.getElementById("1")
-      element.style.backgroundColor = "transparent"
-      element = document.getElementById("2")
-      element.style.backgroundColor = "transparent"
+      let element: any = document.getElementById("3");
+      element.style.backgroundColor = "white";
+      element = document.getElementById("0");
+      element.style.backgroundColor = "transparent";
+      element = document.getElementById("1");
+      element.style.backgroundColor = "transparent";
+      element = document.getElementById("2");
+      element.style.backgroundColor = "transparent";
     } else {
       setItemsCount(itemsCount - 1);
-      let element: any = document.getElementById(item-1+"")
-      element.style.backgroundColor = "white"
-      element = document.getElementById(item+"")
-      element.style.backgroundColor = "transparent"
-      element = document.getElementById(item-2+"")
-      element.style.backgroundColor = "transparent"
-      element = document.getElementById(item-3+"")
-      element.style.backgroundColor = "transparent"
+      let element: any = document.getElementById(item - 1 + "");
+      element.style.backgroundColor = "white";
+      element = document.getElementById(item + "");
+      element.style.backgroundColor = "transparent";
+      element = document.getElementById(item - 2 + "");
+      element.style.backgroundColor = "transparent";
+      element = document.getElementById(item - 3 + "");
+      element.style.backgroundColor = "transparent";
     }
   };
 

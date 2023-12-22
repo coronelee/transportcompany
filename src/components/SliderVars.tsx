@@ -1,11 +1,27 @@
 import styles from "../styles/SliderVars.module.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 import { CiCalendarDate } from "react-icons/ci";
 import { LuPackage } from "react-icons/lu";
-
+function getWindowSize() {
+  const width = window.innerWidth;
+  return width;
+}
 export default function SliderVars() {
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
   const [firstSlide, setFirstSlide] = useState(0);
   const [secondSlide, setSecondSlide] = useState(1);
   const [threeSlide, setThreeSlide] = useState(2);
@@ -46,7 +62,15 @@ export default function SliderVars() {
       price: "10",
     },
   ];
-  
+
+  if (windowSize < 1000) {
+    setTimeout(function tick() {
+      if (firstSlide == 4) {
+        setFirstSlide(0);
+      } else setFirstSlide(firstSlide + 1);
+    }, 2500);
+  }
+
   const changeSliderUp = () => {
     if (firstSlide == 0) {
       setFirstSlide(1);
@@ -71,26 +95,26 @@ export default function SliderVars() {
     }
   };
   const changeSliderDown = () => {
-    if(firstSlide == 0){
-      setFirstSlide(4)
-      setSecondSlide(0)
-      setThreeSlide(1)
-    } else if(firstSlide == 4){
-      setFirstSlide(3)
-      setSecondSlide(4)
-      setThreeSlide(0)
-    }else if(firstSlide == 3){
-      setFirstSlide(2)
-      setSecondSlide(3)
-      setThreeSlide(4)
-    }else if(firstSlide == 2){
-      setFirstSlide(1)
-      setSecondSlide(2)
-      setThreeSlide(3)
-    }else if(firstSlide == 1){
-      setFirstSlide(0)
-      setSecondSlide(1)
-      setThreeSlide(2)
+    if (firstSlide == 0) {
+      setFirstSlide(4);
+      setSecondSlide(0);
+      setThreeSlide(1);
+    } else if (firstSlide == 4) {
+      setFirstSlide(3);
+      setSecondSlide(4);
+      setThreeSlide(0);
+    } else if (firstSlide == 3) {
+      setFirstSlide(2);
+      setSecondSlide(3);
+      setThreeSlide(4);
+    } else if (firstSlide == 2) {
+      setFirstSlide(1);
+      setSecondSlide(2);
+      setThreeSlide(3);
+    } else if (firstSlide == 1) {
+      setFirstSlide(0);
+      setSecondSlide(1);
+      setThreeSlide(2);
     }
   };
   return (
@@ -107,7 +131,7 @@ export default function SliderVars() {
             <div className={styles.item}>
               <div
                 className={styles.item__photo}
-                style={{ backgroundImage: items[firstSlide].photo}}
+                style={{ backgroundImage: items[firstSlide].photo }}
               ></div>
               <h1>{items[firstSlide].name}</h1>
               <div>

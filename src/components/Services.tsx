@@ -1,9 +1,26 @@
-import {useState} from "react";
+import { useState, useEffect } from "react";
 import styles from "../styles/Services.module.scss";
 import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
+function getWindowSize() {
+  const width = window.innerWidth;
+  return width;
+}
 export default function () {
-const [firstSlide, setFirstSlide] = useState(0);
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+  const [firstSlide, setFirstSlide] = useState(0);
   const [secondSlide, setSecondSlide] = useState(1);
   const [threeSlide, setThreeSlide] = useState(2);
   const sliderItems = [
@@ -28,7 +45,16 @@ const [firstSlide, setFirstSlide] = useState(0);
       h3: "Компания - это полный комплекс логистических услуг по доставке грузов из Китая в Россию - сборные грузы и цельные товарные партии, услуги посредника ТаоБао, КАРГО Китай-Россия. ",
     },
   ];
-
+  if (windowSize < 1000) {
+    setTimeout(function tick() {
+      if (threeSlide == 3) {
+        setThreeSlide(0);
+      } else {
+        setThreeSlide(threeSlide + 1)
+      };
+    }, 2500);
+  }
+  
   const changeSliderUp = () => {
     if (firstSlide == 0) {
       setFirstSlide(1);
@@ -49,22 +75,22 @@ const [firstSlide, setFirstSlide] = useState(0);
     }
   };
   const changeSliderDown = () => {
-    if(firstSlide == 0){
-      setFirstSlide(3)
-      setSecondSlide(0)
-      setThreeSlide(1)
-    } else if(firstSlide == 3){
-      setFirstSlide(2)
-      setSecondSlide(3)
-      setThreeSlide(0)
-    }else if(firstSlide == 2){
-      setFirstSlide(1)
-      setSecondSlide(2)
-      setThreeSlide(3)
-    }else if(firstSlide == 1){
-      setFirstSlide(0)
-      setSecondSlide(1)
-      setThreeSlide(2)
+    if (firstSlide == 0) {
+      setFirstSlide(3);
+      setSecondSlide(0);
+      setThreeSlide(1);
+    } else if (firstSlide == 3) {
+      setFirstSlide(2);
+      setSecondSlide(3);
+      setThreeSlide(0);
+    } else if (firstSlide == 2) {
+      setFirstSlide(1);
+      setSecondSlide(2);
+      setThreeSlide(3);
+    } else if (firstSlide == 1) {
+      setFirstSlide(0);
+      setSecondSlide(1);
+      setThreeSlide(2);
     }
   };
   
@@ -74,21 +100,30 @@ const [firstSlide, setFirstSlide] = useState(0);
         <h1>Услуги</h1>
         <div className={styles.line}></div>
         <div className={styles.container__slider}>
-        <div className={styles.slider__arrs}>
+          <div className={styles.slider__arrs}>
             <MdArrowBackIos onClick={() => changeSliderDown()} />
             <MdArrowForwardIos onClick={() => changeSliderUp()} />
           </div>
-          <div className={styles.item__slider} style={{backgroundImage: sliderItems[firstSlide].photo}}>
+          <div
+            className={styles.item__slider}
+            style={{ backgroundImage: sliderItems[firstSlide].photo }}
+          >
             <h1>{sliderItems[firstSlide].h1}</h1>
             <h3>{sliderItems[firstSlide].h3}</h3>
             <button>Подробнее</button>
           </div>
-          <div className={styles.item__slider}  style={{backgroundImage: sliderItems[secondSlide].photo}}>
+          <div
+            className={styles.item__slider}
+            style={{ backgroundImage: sliderItems[secondSlide].photo }}
+          >
             <h1>{sliderItems[secondSlide].h1}</h1>
             <h3>{sliderItems[secondSlide].h3}</h3>
             <button>Подробнее</button>
           </div>
-          <div className={styles.item__slider}  style={{backgroundImage: sliderItems[threeSlide].photo}}>
+          <div
+            className={styles.item__slider}
+            style={{ backgroundImage: sliderItems[threeSlide].photo }}
+          >
             <h1>{sliderItems[threeSlide].h1}</h1>
             <h3>{sliderItems[threeSlide].h3}</h3>
             <button>Подробнее</button>
