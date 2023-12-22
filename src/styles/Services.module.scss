@@ -185,3 +185,26 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .wrapper {
+    width: 100%;
+    height: auto;
+    &__container {
+      margin-top: 150px;
+      width: 100%;
+      height: auto;
+      padding-bottom: 50px;
+      .container__slider {
+        width: auto;
+        .slider__arrs {
+          display: none;
+        }
+        .item__slider {
+          width: 380px;
+          height: 600px;
+        }
+      }
+    }
+  }
+}
