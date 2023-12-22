@@ -57,7 +57,7 @@ export default function Slider() {
     }
   };
 
-  let timerId = setTimeout(function tick() {
+  setTimeout(function tick() {
     sliderUP(items[itemsCount].key);
   }, 2500);
 
