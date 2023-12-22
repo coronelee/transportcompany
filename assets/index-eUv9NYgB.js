@@ -9326,7 +9326,7 @@ function mp() {
   const [e, n] = $.useState(0),
     t = [
       {
-        photo: "../slider/slider3.png",
+        photo: "./slider/slider3.png",
         h1: "Прямое КАРГО из Китая",
         h3: "Доставляем любые грузы из Китая по честной цене",
         key: 0,
