@@ -9015,7 +9015,7 @@ function ep() {
       children: [
         u.jsx("div", {
           className: zt.container__logo,
-          children: u.jsx("img", { src: "../logo.png", alt: "" }),
+          children: u.jsx("img", { src: "./photos/logo.png", alt: "" }),
         }),
         u.jsxs("div", {
           className: zt.container__linksBar,
@@ -9190,25 +9190,25 @@ function sp() {
   const [e, n] = re.useState(0),
     t = [
       {
-        photo: "../slider/slider3.png",
+        photo: "./slider/slider3.png",
         h1: "Прямое КАРГО из Китая",
         h3: "Доставляем любые грузы из Китая по честной цене",
         key: 0,
       },
       {
-        photo: "../slider/slider.png",
+        photo: "./slider/slider.png",
         h1: "Гарантируем сроки!",
         h3: "Если мы не уложимся в обозначенные сроки, доставка груза со скидкой до 90%",
         key: 1,
       },
       {
-        photo: "../slider/slider4.png",
+        photo: "./slider/slider4.png",
         h1: "Выкуп товара с ТаоБао, 1688",
         h3: "Выкуп и доставка товаров с китайских торговых площадок. ",
         key: 2,
       },
       {
-        photo: "../slider/slider2.png",
+        photo: "./slider/slider2.png",
         h1: "Экспресс авто доставка",
         h3: "Доставка автотранспортом из Китая в Россию от 15 дней, от $0,5/кг",
         key: 3,
@@ -9659,7 +9659,7 @@ function Tp() {
                 u.jsx("div", {
                   className: K.elem__circle,
                   children: u.jsx("div", {
-                    style: { backgroundImage: "url('../adv/adv(1).png')" },
+                    style: { backgroundImage: "url('./adv/adv(1).png')" },
                   }),
                 }),
                 u.jsx("h3", { children: "Таможенное оформление груза" }),
@@ -9671,7 +9671,7 @@ function Tp() {
                 u.jsx("div", {
                   className: K.elem__circle,
                   children: u.jsx("div", {
-                    style: { backgroundImage: "url('../adv/adv(8).png')" },
+                    style: { backgroundImage: "url('./adv/adv(8).png')" },
                   }),
                 }),
                 u.jsx("h3", { children: "Страховка груза" }),
@@ -9683,7 +9683,7 @@ function Tp() {
                 u.jsx("div", {
                   className: K.elem__circle,
                   children: u.jsx("div", {
-                    style: { backgroundImage: "url('../adv/adv(7).png')" },
+                    style: { backgroundImage: "url('./adv/adv(7).png')" },
                   }),
                 }),
                 u.jsx("h3", { children: "Проверка товара на брак" }),
@@ -9695,7 +9695,7 @@ function Tp() {
                 u.jsx("div", {
                   className: K.elem__circle,
                   children: u.jsx("div", {
-                    style: { backgroundImage: "url('../adv/adv(6).png')" },
+                    style: { backgroundImage: "url('./adv/adv(6).png')" },
                   }),
                 }),
                 u.jsx("h3", { children: "Доставка в любой город РФ" }),
@@ -9707,7 +9707,7 @@ function Tp() {
                 u.jsx("div", {
                   className: K.elem__circle,
                   children: u.jsx("div", {
-                    style: { backgroundImage: "url('../adv/adv(5).png')" },
+                    style: { backgroundImage: "url('./adv/adv(5).png')" },
                   }),
                 }),
                 u.jsx("h3", { children: "Консолидация на складе" }),
@@ -9719,7 +9719,7 @@ function Tp() {
                 u.jsx("div", {
                   className: K.elem__circle,
                   children: u.jsx("div", {
-                    style: { backgroundImage: "url('../adv/adv(4).png')" },
+                    style: { backgroundImage: "url('./adv/adv(4).png')" },
                   }),
                 }),
                 u.jsx("h3", { children: "Ответственное хранение груза" }),
@@ -9731,7 +9731,7 @@ function Tp() {
                 u.jsx("div", {
                   className: K.elem__circle,
                   children: u.jsx("div", {
-                    style: { backgroundImage: "url('../adv/adv(3).png')" },
+                    style: { backgroundImage: "url('./adv/adv(3).png')" },
                   }),
                 }),
                 u.jsx("h3", { children: "Помощь в оплате товара" }),
@@ -9843,35 +9843,35 @@ function Hp() {
     [l, i] = re.useState(2),
     o = [
       {
-        photo: "url('../photoVars/5.png')",
+        photo: "url('./photoVars/5.png')",
         name: "Авто - обычная",
         days: "9-15 дней",
         weight: "от 5кг",
         price: "2,5",
       },
       {
-        photo: "url('../photoVars/4.png')",
+        photo: "url('./photoVars/4.png')",
         name: "Авто - ускоренная",
         days: "9-12 дней",
         weight: "от 5кг",
         price: "5",
       },
       {
-        photo: "url('../photoVars/3.png')",
+        photo: "url('./photoVars/3.png')",
         name: "Авиа",
         days: "5-10 дней",
         weight: "от 5кг",
         price: "10",
       },
       {
-        photo: "url('../photoVars/2.png')",
+        photo: "url('./photoVars/2.png')",
         name: "Ж/д",
         days: "7-10 дней",
         weight: "от 5кг",
         price: "10",
       },
       {
-        photo: "url('../photoVars/1.png')",
+        photo: "url('./photoVars/1.png')",
         name: "Море",
         days: "5-10 дней",
         weight: "от 5кг",
@@ -10063,22 +10063,22 @@ function Gp() {
     [l, i] = re.useState(2),
     o = [
       {
-        photo: "url('../services/serv(4).png')",
+        photo: "url('./services/serv(4).png')",
         h1: "Выкуп товара",
         h3: "Компания - это полный комплекс логистических услуг по доставке грузов из Китая в Россию - сборные грузы и цельные товарные партии, услуги посредника ТаоБао, КАРГО Китай-Россия. ",
       },
       {
-        photo: "url('../services/serv(3).png')",
+        photo: "url('./services/serv(3).png')",
         h1: "Страховка груза",
         h3: "Компания - это полный комплекс логистических услуг по доставке грузов из Китая в Россию - сборные грузы и цельные товарные партии, услуги посредника ТаоБао, КАРГО Китай-Россия. ",
       },
       {
-        photo: "url('../services/serv(2).png')",
+        photo: "url('./services/serv(2).png')",
         h1: "Аренда склада",
         h3: "Компания - это полный комплекс логистических услуг по доставке грузов из Китая в Россию - сборные грузы и цельные товарные партии, услуги посредника ТаоБао, КАРГО Китай-Россия. ",
       },
       {
-        photo: "url('../services/serv(1).png')",
+        photo: "url('./services/serv(1).png')",
         h1: "Перевод денежных средств",
         h3: "Компания - это полный комплекс логистических услуг по доставке грузов из Китая в Россию - сборные грузы и цельные товарные партии, услуги посредника ТаоБао, КАРГО Китай-Россия. ",
       },
@@ -10242,7 +10242,7 @@ function h1() {
             }),
             u.jsx("div", {
               className: M.about__photo,
-              children: u.jsx("img", { src: "../img.png", alt: "" }),
+              children: u.jsx("img", { src: "./photos/img.png", alt: "" }),
             }),
           ],
         }),
@@ -10495,7 +10495,7 @@ function C1() {
               children: [
                 u.jsx("div", {
                   className: Oe.column__logo,
-                  children: u.jsx("img", { src: "../logo.png", alt: "" }),
+                  children: u.jsx("img", { src: "./photos/logo.png", alt: "" }),
                 }),
                 u.jsxs("div", {
                   className: Oe.column__contacts,
